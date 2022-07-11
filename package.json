@@ -1,0 +1,39 @@
+{
+  "name": "monorepotemplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/sankodan/monorepotemplate.git",
+  "author": "sankodan <54448599+sankodan@users.noreply.github.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react",
+      "**/react-dom",
+      "**/react-native",
+      "**/react-native/**"
+    ]
+  },
+  "scripts": {
+    "packages:publish": "lerna publish --yes",
+    "ios:driverapp": "yarn workspace driverapp ios",
+    "ios:pods:driverapp": "yarn workspace driverapp pod-install",
+    "ios:xcode:driverapp": "yarn workspace driverapp xcode",
+    "android:studio:driverapp": "yarn workspace driverapp studio",
+    "android:driverapp": "yarn workspace driverapp android",
+    "ios:riderapp": "yarn workspace riderapp ios",
+    "ios:pods:riderapp": "yarn workspace riderapp pod-install",
+    "ios:xcode:riderapp": "yarn workspace riderapp xcode",
+    "android:studio:riderapp": "yarn workspace riderapp studio",
+    "android:riderapp": "yarn workspace riderapp android",
+    "metro": "yarn workspace start",
+    "web": "yarn workspace webapp start",
+    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
