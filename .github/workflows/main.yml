@@ -81,8 +81,8 @@ jobs:
       - name: Install packages
         run: yarn install
 
-      - name: Run tests
-        run:  cd packages/riderapp/android && bundle exec fastlane android test
+      # - name: Run tests
+      #   run:  cd packages/riderapp/android && bundle exec fastlane android test
     
       - name: Decode Service Account Key JSON File
         uses: timheuer/base64-to-file@v1
