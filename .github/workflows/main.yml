@@ -45,6 +45,7 @@ jobs:
   #   secrets: inherit
 
   release-android:
+    needs: install-and-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -58,7 +59,5 @@ jobs:
         run: cd packages/riderapp/android && bundle install && cd .. && cd .. && cd ..
       - name: Install packages
         run: yarn install
-      - name: Prebuild
-        run: npm run prebuild-android
       - name: Execute Fastlane command
-        run: cd cd packages/riderapp/android && fastlane test
+        run: cd packages/riderapp/android && fastlane test
