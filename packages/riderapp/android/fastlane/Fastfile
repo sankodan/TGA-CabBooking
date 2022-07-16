@@ -46,10 +46,10 @@ platform :android do
     upload_to_play_store(
       json_key: ENV["ANDROID_JSON_KEY_FILE"],
       track: "internal",
-      skip_ upload metadata: true,
+      skip_upload metadata: true,
       skip_upload changelogs: true,
       skip_upload_images: true,
-      skip upload screenshots: true
+      skip_upload_screenshots: true
     )
     end
 end
