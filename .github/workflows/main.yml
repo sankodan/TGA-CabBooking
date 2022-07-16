@@ -35,7 +35,7 @@ jobs:
   # Second Job
   build-android:
     needs: install-and-test
-    uses: ./.github/workflows/build-android.yml
+    uses: build-android.yml
     secrets: inherit
 
   # Third Job
