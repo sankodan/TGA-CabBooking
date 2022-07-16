@@ -1,4 +1,4 @@
-package com.riderapp.newarchitecture.components;
+package com.cabbooking.riderapp.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

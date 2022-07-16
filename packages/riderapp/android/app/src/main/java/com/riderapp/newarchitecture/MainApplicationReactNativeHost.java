@@ -1,4 +1,4 @@
-package com.riderapp.newarchitecture;
+package com.cabbooking.riderapp.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.riderapp.BuildConfig;
-import com.riderapp.newarchitecture.components.MainComponentsRegistry;
-import com.riderapp.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.cabbooking.riderapp.BuildConfig;
+import com.cabbooking.riderapp.newarchitecture.components.MainComponentsRegistry;
+import com.cabbooking.riderapp.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

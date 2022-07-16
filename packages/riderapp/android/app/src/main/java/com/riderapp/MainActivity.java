@@ -1,4 +1,4 @@
-package com.riderapp;
+package com.cabbooking.riderapp;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
