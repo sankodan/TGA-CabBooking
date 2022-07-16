@@ -82,7 +82,7 @@ jobs:
         run: yarn install
 
       - name: Run tests
-        run:  cd packages/riderapp/android && fastlane test
+        run:  cd packages/riderapp/android && bundle exec fastlane android test
     
       - name: Decode Service Account Key JSON File
         uses: timheuer/base64-to-file@v1
@@ -113,7 +113,7 @@ jobs:
           versionCode: ${{ env.version_code }}
     
       - name: Build & deploy Android release
-        run: fastlane deploy
+        run: bundle exec fastlane deploy
         env:
           KEYSTORE_FILE: ${{ steps.android_keystore.outputs.filePath }}
           STORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}

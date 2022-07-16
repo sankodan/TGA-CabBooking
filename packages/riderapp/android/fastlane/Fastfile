@@ -33,22 +33,23 @@ platform :android do
   desc "Deploy a new version to the Google Play"
   lane :deploy do
     gradle(
-    task: "assemble", # or    build_type: "release"
-    print command: false,
-    properties: {
-    "android.injected.signing.store.file" => ENV["KEYSTORE_FILE"],
-    "android.injected.signing.store.password" => ENV["STORE_PASSWORD"],
-    "android.injected.signing.kev.alias" => ENVI["KEY_ALIAS"]
-    "android.injected.signing.key.password" => ENV["KEY_PASSWORD" ] ,
-    }
+      task: "assemble",
+      build_type: "release",
+      print_command: false,
+      properties: {
+        "android.injected.signing.store.file" => ENV["KEYSTORE_FILE"],
+        "android.injected.signing.store.password" => ENV["STORE_PASSWORD"],
+        "android.injected.signing.kev.alias" => ENVI["KEY_ALIAS"],
+        "android.injected.signing.key.password" => ENV["KEY_PASSWORD" ],
+      }
     )
     upload_to_play_store(
-    json_key: ENV["ANDROID_JSON_KEY_FILE"].
-    track: "internal"
-    skip_ upload metadata: true,
-    skip_upload changelogs: true
-    skip_upload_images: true,
-    skip upload screenshots: true
+      json_key: ENV["ANDROID_JSON_KEY_FILE"],
+      track: "internal",
+      skip_ upload metadata: true,
+      skip_upload changelogs: true,
+      skip_upload_images: true,
+      skip upload screenshots: true
     )
     end
 end
