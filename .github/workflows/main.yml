@@ -43,8 +43,7 @@ jobs:
   #   needs: install-and-test
   #   uses: ./.github/workflows/build-ios.yml
   #   secrets: inherit
-  
-jobs:
+
   release-android:
     runs-on: ubuntu-latest
     steps:
