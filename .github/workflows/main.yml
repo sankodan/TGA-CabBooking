@@ -33,13 +33,33 @@ jobs:
       #     base-coverage-file: ./jest-report.json
 
   # Second Job
-  build-android:
-    needs: install-and-test
-    uses: build-android.yml
-    secrets: inherit
+  # build-android:
+  #   needs: install-and-test
+  #   uses: build-android.yml
+  #   secrets: inherit
 
   # Third Job
   # build-ios:
   #   needs: install-and-test
   #   uses: ./.github/workflows/build-ios.yml
   #   secrets: inherit
+  
+jobs:
+  release-android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "2.x"
+      - name: Install Fastlane
+        run: cd packages/riderapp/android && bundle install && cd .. && cd .. && cd ..
+      - name: Install packages
+        run: yarn install
+      - name: Prebuild
+        run: npm run prebuild-android
+      - name: Execute Fastlane command
+        run: cd cd packages/riderapp/android && fastlane test
