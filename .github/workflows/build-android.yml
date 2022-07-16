@@ -1,19 +1,6 @@
 name: "Android Build"
 
-on:
-  workflow_call:
-    inputs:
-      environment:
-        required: false
-        type: string
-        default: "release"
-      publish:
-        required: false
-        type: boolean
-        description: Android Build
-
 jobs:
-name: Build and release Android app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
