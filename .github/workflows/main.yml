@@ -1,4 +1,4 @@
-name: Pull Request into Master, Develop and Preprod
+    name: Pull Request into Master, Develop and Preprod
 
 on: [push]
 
@@ -68,23 +68,23 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-         with:
-           node-version: "18.x"
-           
+        with:
+          node-version: "18.x"
+
       - name: Set up ruby env
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: "2.x"
-        bundler-cache: true
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.x"
+          bundler-cache: true
 
       - name: Install Fastlane
-          run: cd packages/riderapp/android && bundle install && cd .. && cd .. && cd ..
+        run: cd packages/riderapp/android && bundle install && cd .. && cd .. && cd ..
 
       - name: Install packages
-          run: yarn install
+        run: yarn install
 
       - name: Execute Fastlane command
-          run: cd packages/riderapp/android
+        run: cd packages/riderapp/android
 
       - name: Run tests
         run:  fastlane android test
