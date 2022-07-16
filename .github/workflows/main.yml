@@ -1,7 +1,5 @@
-    name: Pull Request into Master, Develop and Preprod
-
+name: Pull Request into Master, Develop and Preprod
 on: [push]
-
 jobs:
   #First job
   install-and-test:
