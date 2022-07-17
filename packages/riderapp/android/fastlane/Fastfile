@@ -33,7 +33,7 @@ platform :android do
   desc "Deploy a new version to the Google Play"
   lane :deploy do
     gradle(
-      task: "assemble",
+      task: "bundle",
       build_type: "release",
       print_command: false,
       properties: {
@@ -49,7 +49,8 @@ platform :android do
       skip_upload_metadata: true,
       skip_upload_changelogs: true,
       skip_upload_images: true,
-      skip_upload_screenshots: true
+      skip_upload_screenshots: true,
+      skip_upload_apk: true,
     )
     end
 end
