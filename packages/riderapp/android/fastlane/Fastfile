@@ -35,11 +35,11 @@ platform :android do
     gradle(
       task: "bundle",
       build_type: "release",
-      print_command: true,
+      print_command: false,
       properties: {
         "android.injected.signing.store.file" => ENV["KEYSTORE_FILE"],
         "android.injected.signing.store.password" => ENV["STORE_PASSWORD"],
-        "android.injected.signing.kev.alias" => ENV["KEY_ALIAS"],
+        "android.injected.signing.key.alias" => ENV["KEY_ALIAS"],
         "android.injected.signing.key.password" => ENV["KEY_PASSWORD" ],
       }
     )
