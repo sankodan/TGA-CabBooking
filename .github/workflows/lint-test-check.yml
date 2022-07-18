@@ -23,8 +23,8 @@ jobs:
       - name: Linting
         run: yarn lint
 
-      - name: Unit & Integration tests
-        run: yarn test
+      # - name: Unit & Integration tests
+      #   run: yarn test
       # - name: Unit & Integration tests
       #   run: yarn test
 
