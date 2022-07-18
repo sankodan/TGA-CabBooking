@@ -1,4 +1,4 @@
-app_identifier("org.reactjs.native.example.RiderApp") # The bundle identifier of your app
+app_identifier("com.cabbooking.riderapp") # The bundle identifier of your app
 apple_id("sandeep23kodan@gmail.com") # Your Apple email address
 
 itc_team_id("124033755") # App Store Connect Team ID

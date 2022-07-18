@@ -8,8 +8,13 @@ on:
     branches: [develop]
 
 jobs:
+  #First job
+  install-and-test:
+    uses: ./.github/workflows/lint-test-check.yml
+    secrets: inherit
+
   versioning:
-    uses: ./.github/workflows/release.yml
+    uses: ./.github/workflows/version-bump.yml
     with:
       tag-suffix: dev
       release-title: Dev Build
@@ -24,10 +29,10 @@ jobs:
       publish: true
     secrets: inherit
 
-  # Third Job
-  build-and-release-ios:
-    needs: versioning
-    uses: ./.github/workflows/build-ios.yml
-    with:
-      publish: true
-    secrets: inherit
+  # # Third Job
+  # build-and-release-ios:
+  #   needs: versioning
+  #   uses: ./.github/workflows/build-ios.yml
+  #   with:
+  #     publish: true
+  #   secrets: inherit
