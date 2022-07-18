@@ -80,5 +80,5 @@ jobs:
         with:
           name: app-store ipa & dsyms
           path: |
-            ${{ github.workspace }}/example-iOS.ipa
-            ${{ github.workspace }}/*.app.dSYM.zip
+            ${{ github.workspace }}/packages/riderapp/ios/RiderApp.ipa
+            ${{ github.workspace }}/packages/riderapp/ios/*.app.dSYM.zip
