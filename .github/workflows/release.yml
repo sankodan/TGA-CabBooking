@@ -18,14 +18,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Use Node.js 14
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 18
           cache: "yarn"
 
       - name: Install Node modules
-        run: yarn ci
+        run: yarn install
 
       - name: "Automated Version Bump"
         uses: "paramsinghvc/gh-action-bump-version@master"
@@ -36,7 +36,7 @@ jobs:
           tag-suffix: ${{ inputs.tag-suffix }}
 
       - name: "Sync React Native version with package.json version"
-        run: npx react-native-version
+        run: cd packages/riderapp/ && npx react-native-version
 
       - name: "Commit version sync changes"
         uses: EndBug/add-and-commit@v9
