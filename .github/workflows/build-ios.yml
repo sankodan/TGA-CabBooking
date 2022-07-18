@@ -25,9 +25,9 @@ jobs:
         run: yarn install
 
       - name: Restore Pods cache
-          uses: actions/cache@v3
-          with:
-            path: |
+        uses: actions/cache@v3
+        with:
+          path: |
               ios/Pods
               ~/Library/Caches/CocoaPods
               ~/.cocoapods
