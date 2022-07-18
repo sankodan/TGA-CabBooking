@@ -126,4 +126,4 @@ jobs:
         with:
           name: assets
           path: |
-            ${{ github.workspace }}/app/release
+            ${{ github.workspace }}/packages/riderapp/android/app/build/outputs/bundle/release/
