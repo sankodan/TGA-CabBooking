@@ -4,9 +4,9 @@ on:
   workflow_call:
      
 jobs:
- deploy:
-   runs-on: macos-latest
-   steps:
+  deploy:
+    runs-on: macos-latest
+    steps:
      - uses: actions/checkout@v2
  
      - name: Set up ruby env
