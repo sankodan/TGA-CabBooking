@@ -7,13 +7,16 @@ jobs:
   deploy:
     runs-on: macos-latest
     steps:
-     - uses: actions/checkout@v2
- 
-     - name: Set up ruby env
-       uses: ruby/setup-ruby@v1
-       with:
-         ruby-version: 2.7.2
-         bundler-cache: true
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      - name: Set up ruby env
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.7.2"
+          bundler-cache: true
 
       - name: Install Fastlane
         run: cd packages/riderapp/ios && bundle install && cd .. && cd .. && cd ..
