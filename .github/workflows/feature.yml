@@ -8,12 +8,13 @@ on:
     branches: [feature-**]
 
 jobs:
-  # #First job
-  # install-and-test:
-  #   uses: ./.github/workflows/lint-test-check.yml
-  #   secrets: inherit
+   #First job
+    install-and-test:
+     uses: ./.github/workflows/lint-test-check.yml
+     secrets: inherit
 
     # Fourth Job
-  build-ios:
-    uses: ./.github/workflows/build-ios.yml
-    secrets: inherit
+    build-ios:
+     needs: install-and-test
+     uses: ./.github/workflows/build-ios.yml
+     secrets: inherit
