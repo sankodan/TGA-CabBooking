@@ -125,6 +125,7 @@ lane :upload_release do
 
  lane :beta do
   build_app(scheme: "RiderApp",
+            export_method: "development"
             workspace: "RiderApp.xcworkspace",
             include_bitcode: true)
 end
