@@ -28,6 +28,5 @@ jobs:
   #Fourth Job
   build-ios:
     needs: versioning
-    needs: install-and-test
     uses: ./.github/workflows/build-ios.yml
     secrets: inherit
