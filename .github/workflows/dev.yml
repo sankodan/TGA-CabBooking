@@ -26,12 +26,10 @@ jobs:
   build-and-release-android:
     needs: versioning
     uses: ./.github/workflows/build-android.yml
-    with:
     secrets: inherit
 
   #Fourth Job
   build-and-release-ios:
     needs: versioning
     uses: ./.github/workflows/build-ios.yml
-    with:
     secrets: inherit
