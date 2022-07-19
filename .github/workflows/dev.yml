@@ -27,7 +27,6 @@ jobs:
     needs: versioning
     uses: ./.github/workflows/build-android.yml
     with:
-      publish: true
     secrets: inherit
 
   #Fourth Job
@@ -35,5 +34,4 @@ jobs:
     needs: versioning
     uses: ./.github/workflows/build-ios.yml
     with:
-      publish: true
     secrets: inherit
