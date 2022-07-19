@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Print the input selected App to STDOUT
+        run: echo  The selected App is ${{ inputs.selectApp }} 
+
       - name: Checkout
         uses: actions/checkout@v3
 
