@@ -12,6 +12,7 @@ jobs:
 
   #Second job
   versioning:
+    needs: install-and-test
     uses: ./.github/workflows/version-bump.yml
     with:
       tag-suffix: uat
@@ -24,8 +25,9 @@ jobs:
     uses: ./.github/workflows/build-android.yml
     secrets: inherit
 
-  # Fourth Job
-  # build-ios:
-  #   needs: install-and-test
-  #   uses: ./.github/workflows/build-ios.yml
-  #   secrets: inherit
+  #Fourth Job
+  build-ios:
+    needs: versioning
+    needs: install-and-test
+    uses: ./.github/workflows/build-ios.yml
+    secrets: inherit

@@ -13,14 +13,16 @@ jobs:
     uses: ./.github/workflows/lint-test-check.yml
     secrets: inherit
 
+ #Second job
   versioning:
+    needs: install-and-test
     uses: ./.github/workflows/version-bump.yml
     with:
       tag-suffix: dev
       release-title: Dev Build
     secrets: inherit
 
-  # Second Job
+  #Third Job
   build-and-release-android:
     needs: versioning
     uses: ./.github/workflows/build-android.yml
@@ -29,10 +31,10 @@ jobs:
       publish: true
     secrets: inherit
 
-  # # Third Job
-  # build-and-release-ios:
-  #   needs: versioning
-  #   uses: ./.github/workflows/build-ios.yml
-  #   with:
-  #     publish: true
-  #   secrets: inherit
+  #Fourth Job
+  build-and-release-ios:
+    needs: versioning
+    uses: ./.github/workflows/build-ios.yml
+    with:
+      publish: true
+    secrets: inherit

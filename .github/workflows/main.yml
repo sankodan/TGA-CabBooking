@@ -12,9 +12,10 @@ jobs:
 
   #Second job
   versioning:
-    uses: ./.github/workflows/release.yml
+    needs: install-and-test
+    uses: ./.github/workflows/version-bump.yml
     with:
-      tag-suffix: main
+      tag-suffix: prod
       release-title: Prod Build
     secrets: inherit
 
@@ -24,8 +25,9 @@ jobs:
     uses: ./.github/workflows/build-android.yml
     secrets: inherit
 
-  # Fourth Job
-  # build-ios:
-  #   needs: install-and-test
-  #   uses: ./.github/workflows/build-ios.yml
-  #   secrets: inherit
+  #Fourth Job
+  build-ios:
+    needs: versioning
+    needs: install-and-test
+    uses: ./.github/workflows/build-ios.yml
+    secrets: inherit
