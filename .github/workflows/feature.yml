@@ -4,18 +4,18 @@
 name: Feature Updated
 
 on:
- workflow_dispatch:
-    inputs:
-      selectApp:
-        description: 'App Name'
-        required: true
-        default: 'riderapp' 
-        type: choice
-        options:
-        - riderapp
-        - driverapp
-  # push:
-  #   branches: [feature-**]
+#  workflow_dispatch:
+#     inputs:
+#       selectApp:
+#         description: 'App Name'
+#         required: true
+#         default: 'riderapp' 
+#         type: choice
+#         options:
+#         - riderapp
+#         - driverapp
+  push:
+    branches: [feature-**]
 jobs:
    #First job
   install-and-test:
