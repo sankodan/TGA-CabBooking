@@ -5,7 +5,7 @@ name: Feature Updated
 
 on:
  workflow_dispatch:
- inputs:
+    inputs:
       selectApp:
         description: 'App Name'
         required: true
