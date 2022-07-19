@@ -3,31 +3,19 @@
 
 name: Feature Updated
 
-on: 
-  workflow_dispatch:
+on:
+ workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
+      selectApp:
+        description: 'App Name'
         required: true
-        default: 'warning' 
+        default: 'riderapp' 
         type: choice
         options:
-        - info
-        - warning
-        - debug 
-# on:
-#  workflow_dispatch:
-#     inputs:
-#       selectApp:
-#         description: 'App Name'
-#         required: true
-#         default: 'riderapp' 
-#         type: choice
-#         options:
-#         - riderapp
-#         - driverapp
-#   # push:
-#   #   branches: [feature-**]
+        - riderapp
+        - driverapp
+  # push:
+  #   branches: [feature-**]
 jobs:
    #First job
   install-and-test:
