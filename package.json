@@ -1,6 +1,6 @@
 {
   "name": "monorepotemplate",
-  "version": "1.0.0",
+  "version": "1.0.1-dev.0",
   "main": "index.js",
   "private": true,
   "repository": "https://github.com/sankodan/monorepotemplate.git",
@@ -18,6 +18,8 @@
     ]
   },
   "scripts": {
+    "test": "yarn jest packages/riderapp",
+    "lint": "yarn eslint packages/riderapp",
     "packages:publish": "lerna publish --yes",
     "ios:driverapp": "yarn workspace driverapp ios",
     "ios:pods:driverapp": "yarn workspace driverapp pod-install",
@@ -34,6 +36,13 @@
     "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
   },
   "devDependencies": {
+    "eslint": "8.19.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.2.4",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.30.1",
+    "jest": "^28.1.3",
     "lerna": "^3.22.1"
   }
 }

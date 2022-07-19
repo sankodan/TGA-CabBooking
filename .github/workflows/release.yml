@@ -1,0 +1,32 @@
+name: Release Updated
+
+on:
+  push:
+    branches: [release]
+
+jobs:
+  #First job
+  install-and-test:
+    uses: ./.github/workflows/lint-test-check.yml
+    secrets: inherit
+
+  #Second job
+  versioning:
+    needs: install-and-test
+    uses: ./.github/workflows/version-bump.yml
+    with:
+      tag-suffix: uat
+      release-title: UAT Build
+    secrets: inherit
+
+  #Third Job
+  build-android:
+    needs: versioning
+    uses: ./.github/workflows/build-android.yml
+    secrets: inherit
+
+  #Fourth Job
+  build-ios:
+    needs: versioning
+    uses: ./.github/workflows/build-ios.yml
+    secrets: inherit
