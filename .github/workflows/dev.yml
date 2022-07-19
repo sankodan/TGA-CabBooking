@@ -27,7 +27,6 @@ jobs:
     needs: versioning
     uses: ./.github/workflows/build-android.yml
     with:
-      environment: release
       publish: true
     secrets: inherit
 
