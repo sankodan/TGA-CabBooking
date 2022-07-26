@@ -6,10 +6,11 @@ name: Feature Updated
 on:
   push:
     branches: [feature-**]
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
 jobs:
    #First job
   install-and-test:
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     uses: ./.github/workflows/lint-test-check.yml
     secrets: inherit
