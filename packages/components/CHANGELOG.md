@@ -5,4 +5,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.0.1 (2022-07-26)
 
+**Note:** Version bump only for package @sankodan/com.cabbooking.components
+
+
+
+
+
+## 1.0.1 (2022-07-26)
+
 **Note:** Version bump only for package com.cabbooking.components
