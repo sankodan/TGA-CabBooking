@@ -17,17 +17,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: 'sankodan'
       - run: yarn install
-      - name: "Version and publish" # Interesting step
+      - run: lerna publish --yes
         env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor}}@users.noreply.github.com"
-
-          if [ ${{ github.base_ref }} = development ]; then
-            npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
-          else
-            npx lerna version --conventional-commits --conventional-graduate --yes
-          fi
-
-          npx lerna publish from-git --yes
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
