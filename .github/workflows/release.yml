@@ -19,6 +19,10 @@ jobs:
       release-title: UAT Build
     secrets: inherit
 
+  publish-packages:
+    uses: ./.github/workflows/publish-packages.yml
+    secrets: inherit
+
   #Third Job
   build-android:
     needs: versioning

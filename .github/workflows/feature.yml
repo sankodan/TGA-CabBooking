@@ -7,12 +7,7 @@ on:
   push:
     branches: [feature-**]
 jobs:
-  #  #First job
-  # install-and-test:
-  #   uses: ./.github/workflows/lint-test-check.yml
-  #   secrets: inherit
-
-  #First job
-    publish-packages:
-      uses: ./.github/workflows/publish-packages.yml
-      secrets: inherit
+   #First job
+  install-and-test:
+    uses: ./.github/workflows/lint-test-check.yml
+    secrets: inherit
