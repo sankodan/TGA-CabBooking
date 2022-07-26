@@ -1,5 +1,5 @@
 {
-  "name": "com.cabbooking.core",
+  "name": "@sankodan/com.cabbooking.core",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,5 +11,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sankodan/TGA-CabBooking.git"
+  },
+  "publishConfig": {
+    "@sankodan:registry": "https://npm.pkg.github.com"
   }
 }
