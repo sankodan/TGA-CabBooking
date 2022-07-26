@@ -17,6 +17,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: 'sankodan'
       - run: yarn install
+      - uses: fregante/setup-git-user@v1
       - run: lerna publish --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
