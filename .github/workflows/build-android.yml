@@ -2,7 +2,8 @@ name: Android Build & Deploy
  
 on:
   workflow_call:
- 
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
    release-android:
     runs-on: ubuntu-latest

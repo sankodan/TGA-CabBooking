@@ -1,5 +1,6 @@
 name: Version-Bump
-
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 on:
   workflow_call:
     inputs:

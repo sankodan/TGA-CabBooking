@@ -2,7 +2,8 @@ name: iOS Build & Deploy
  
 on:
   workflow_call:
- 
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
    release-ios:
     runs-on: macos-latest

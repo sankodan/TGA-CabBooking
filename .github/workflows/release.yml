@@ -3,7 +3,8 @@ name: Release Updated
 on:
   push:
     branches: [release]
-
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   #First job
   install-and-test:

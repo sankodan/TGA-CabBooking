@@ -1,10 +1,9 @@
 import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react-native';
 import NewMessageForm from './NewMessageForm';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 
 const wrapper = shallow(<NewMessageForm />);
-
 
 describe('NewMessageForm', () => {
   describe('clicking send', () => {
