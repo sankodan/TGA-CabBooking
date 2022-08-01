@@ -18,8 +18,8 @@
     ]
   },
   "scripts": {
-    "test": "yarn jest packages/riderapp",
-    "lint": "yarn eslint packages/riderapp",
+    "test": "yarn workspace riderapp test",
+    "lint": "yarn workspace riderapp eslint",
     "packages:publish": "lerna publish --yes",
     "ios:driverapp": "yarn workspace driverapp ios",
     "ios:pods:driverapp": "yarn workspace driverapp pod-install",

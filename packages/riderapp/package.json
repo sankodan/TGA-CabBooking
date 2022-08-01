@@ -9,7 +9,7 @@
     "pod-install": "npx pod-install ios",
     "studio": "studio android",
     "xcode": "xed ios",
-    "test": "jest src",
+    "test": "jest src --coverage",
     "lint": "eslint ."
   },
   "dependencies": {
