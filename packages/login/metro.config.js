@@ -19,6 +19,5 @@ module.exports = {
     // Ensure we resolve nohoist libraries from this directory.
     blockList: exclusionList(monorepoMetroTools.blockList),
     extraNodeModules: monorepoMetroTools.extraNodeModules,
-    sourceExts: ['jsx', 'js', 'ts', 'tsx', 'cjs'],
   },
 };

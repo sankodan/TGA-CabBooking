@@ -31,6 +31,9 @@ jobs:
       - name: Unit & Integration tests
         run: yarn test
 
+      - name: Collect all coverage
+        run: yarn coverage
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "335629972214",
+    "project_id": "tga-bookingapp",
+    "storage_bucket": "tga-bookingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335629972214:android:d60b339b464f143f6172d7",
+        "android_client_info": {
+          "package_name": "com.sapient.tga.mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335629972214-8g82201t4i50noqojh8sm20ie5fp2lv8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzMnK4XxoiHQW8V1OlJ6c_pnTBv0ImsIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335629972214-8g82201t4i50noqojh8sm20ie5fp2lv8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "335629972214-h31un3526m56t1ff2v2s4cn0hueea06i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sapient.tga.mobileapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

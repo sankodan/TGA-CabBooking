@@ -1,4 +1,4 @@
-package com.mobileapp.newarchitecture.modules;
+package com.sapient.tga.mobileapp.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

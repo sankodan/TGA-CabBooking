@@ -3,7 +3,7 @@ import {fireEvent, render, screen} from '@testing-library/react-native';
 import {shallow} from 'enzyme';
 import  LoginScreen from '../LoginScreen'
 
-jest.mock('@sankodan/com.cabbooking.core/src/api/auth')
+// jest.mock('@sankodan/com.cabbooking.core/src/api/auth')
 
 describe('LoginScreen', () => {
   describe('clicking send', () => {
