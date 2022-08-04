@@ -11,10 +11,7 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react",
-      "**/react-dom",
-      "**/react-native",
-      "**/react-native/**"
+      "*"
     ]
   },
   "scripts": {

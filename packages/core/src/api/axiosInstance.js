@@ -21,7 +21,6 @@ async function errorHandler(error) {
   const { status, data = {} } = errorResponse;
   const { message } = data;
   const originalRequest = error.config;
-  const { dispatch } = store;
   // refersh token in case of Unauthorized
   if ((status === 401 || message === 'Unauthorized') && !originalRequest.retryapi) {
     originalRequest.retryapi = true;

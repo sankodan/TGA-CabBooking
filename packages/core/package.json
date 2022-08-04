@@ -14,5 +14,10 @@
   },
   "publishConfig": {
     "@sankodan:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@react-native-firebase/app": "^15.2.0",
+    "@react-native-firebase/auth": "^15.2.0",
+    "react-native-paper": "^4.12.4"
   }
 }
