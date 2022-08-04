@@ -11,23 +11,23 @@
       "packages/*"
     ],
     "nohoist": [
-      "*"
+      "**/react",
+      "**/react-dom",
+      "**/react-native",
+      "**/react-native/**",
+      "**/enzyme-adapter-react-16",
+      "**/enzyme-adapter-react-16/**"
     ]
   },
   "scripts": {
-    "test": "yarn workspace riderapp test",
-    "lint": "yarn workspace riderapp eslint",
+    "test": "yarn workspace mobileapp test",
+    "lint": "yarn workspace mobileapp eslint",
     "packages:publish": "lerna publish --yes",
-    "ios:driverapp": "yarn workspace driverapp ios",
-    "ios:pods:driverapp": "yarn workspace driverapp pod-install",
-    "ios:xcode:driverapp": "yarn workspace driverapp xcode",
-    "android:studio:driverapp": "yarn workspace driverapp studio",
-    "android:driverapp": "yarn workspace driverapp android",
-    "ios:riderapp": "yarn workspace riderapp ios",
-    "ios:pods:riderapp": "yarn workspace riderapp pod-install",
-    "ios:xcode:riderapp": "yarn workspace riderapp xcode",
-    "android:studio:riderapp": "yarn workspace riderapp studio",
-    "android:riderapp": "yarn workspace riderapp android",
+    "ios:mobileapp": "yarn workspace mobileapp ios",
+    "ios:pods:mobileapp": "yarn workspace mobileapp pod-install",
+    "ios:xcode:mobileapp": "yarn workspace mobileapp xcode",
+    "android:studio:mobileapp": "yarn workspace mobileapp studio",
+    "android:mobileapp": "yarn workspace mobileapp android",
     "metro": "yarn workspace start",
     "web": "yarn workspace webapp start",
     "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"

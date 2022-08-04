@@ -20,7 +20,7 @@ jobs:
           bundler-cache: true
 
       - name: Install Fastlane
-        run: cd packages/riderapp/ios && bundle install && cd .. && cd .. && cd ..
+        run: cd packages/mobileapp/ios && bundle install && cd .. && cd .. && cd ..
 
       - name: Install packages
         run: yarn install
@@ -37,7 +37,7 @@ jobs:
                 ${{ runner.os }}-pods-
 
       - name: Install pod dependencies
-        run: cd packages/riderapp/ios && pod install && cd ..
+        run: cd packages/mobileapp/ios && pod install && cd ..
 
       - name: Install the Apple certificate and provisioning profile
         env:
@@ -69,7 +69,7 @@ jobs:
             cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
             
       - name: Build & upload iOS binary
-        run: cd packages/riderapp/ios && bundle exec fastlane ios beta
+        run: cd packages/mobileapp/ios && bundle exec fastlane ios beta
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
@@ -81,5 +81,5 @@ jobs:
         with:
           name: app-store ipa & dsyms
           path: |
-            ${{ github.workspace }}/packages/riderapp/ios/RiderApp.ipa
-            ${{ github.workspace }}/packages/riderapp/ios/*.app.dSYM.zip
+            ${{ github.workspace }}/packages/mobileapp/ios/RiderApp.ipa
+            ${{ github.workspace }}/packages/mobileapp/ios/*.app.dSYM.zip

@@ -37,7 +37,7 @@ jobs:
           tag-suffix: ${{ inputs.tag-suffix }}
 
       - name: "Sync React Native version with package.json version"
-        run: cd packages/riderapp/ && npx react-native-version
+        run: cd packages/mobileapp/ && npx react-native-version
 
       - name: "Commit version sync changes"
         uses: EndBug/add-and-commit@v9
