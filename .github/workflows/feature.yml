@@ -15,5 +15,5 @@ jobs:
   #   uses: ./.github/workflows/lint-test-check.yml
   #   secrets: inherit
     build-and-release-ios:
-    uses: ./.github/workflows/build-ios.yml
-    secrets: inherit
+      uses: ./.github/workflows/build-ios.yml
+      secrets: inherit
