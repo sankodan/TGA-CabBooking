@@ -34,7 +34,7 @@ workflows:
                 yarn install
             - name: Set Android SDK location
               script: |
-                echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/android/local.properties"
+                echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/packages/mobileapp/android/local.properties"
             - name: Set up keystore
               script: |
                     echo $CM_KEYSTORE | base64 --decode > /tmp/keystore.keystore
