@@ -4,7 +4,7 @@
 workflows:
     react-native-android:
         name: React Native Android
-        working_directory: packages/mobileapp
+        # working_directory: packages/mobileapp
         max_build_duration: 120
         instance_type: mac_mini
         environment:
