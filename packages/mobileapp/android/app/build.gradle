@@ -80,7 +80,7 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
-    bundleInDebug: true 
+    bundleInDebug: true,
     cliPath: "../../../../node_modules/react-native"
 ]
 
