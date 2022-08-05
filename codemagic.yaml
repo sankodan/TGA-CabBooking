@@ -51,9 +51,9 @@ workflows:
                 # Note that tracks can be specified when retrieving latest build number from Google Play, for example:
                 # export NEW_BUILD_NUMBER=$(($(google-play get-latest-build-number --package-name "$PACKAGE_NAME" --tracks=alpha) + 1))
                 export LATEST_GOOGLE_PLAY_BUILD_NUMBER=$(($(google-play get-latest-build-number --package-name "$PACKAGE_NAME") + 1))
-                cd packages/mobileapp/android && ./gradlew clean app:assembleRelease -x bundleReleaseJsAndAssets
+                cd packages/mobileapp/android && ./gradlew clean app:bundleRelease -x bundleReleaseJsAndAssets
         artifacts:
-            - packages/mobileapp/android/app/build/outputs/**/*.apk
+            - packages/mobileapp/android/app/build/outputs/**/*.aab
         publishing:
             # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
             email:
