@@ -7,14 +7,13 @@ import Paragraph from './src/Paragraph'
 import TextInput from './src/TextInput'
 import Toast from './src/Toast'
 
-
 module.exports = {
-    BackButton,
-    Background,
-    Button,
-    Header,
-    Logo,
-    Paragraph,
-    TextInput,
-    Toast
+  BackButton,
+  Background,
+  Button,
+  Header,
+  Logo,
+  Paragraph,
+  TextInput,
+  Toast
 }

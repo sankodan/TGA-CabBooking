@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
 import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import { Text } from 'react-native-paper'
-import { Background, BackButton, TextInput, Button, Header, Logo, Toast } from "@sankodan/com.cabbooking.components"
-import { theme } from '@sankodan/com.cabbooking.core'
-import { emailValidator } from '@sankodan/com.cabbooking.core'
-import { passwordValidator } from '@sankodan/com.cabbooking.core'
-import { nameValidator } from '@sankodan/com.cabbooking.core'
-import { signUpUser } from '@sankodan/com.cabbooking.core'
+import { Background, BackButton, TextInput, Button, Header, Logo, Toast } from '@sankodan/com.cabbooking.components'
+import { theme, emailValidator, passwordValidator, nameValidator, signUpUser } from '@sankodan/com.cabbooking.core'
 
-export default function RegisterScreen({ navigation }) {
+export default function RegisterScreen ({ navigation }) {
   const [name, setName] = useState({ value: '', error: '' })
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
@@ -29,7 +25,7 @@ export default function RegisterScreen({ navigation }) {
     const response = await signUpUser({
       name: name.value,
       email: email.value,
-      password: password.value,
+      password: password.value
     })
     if (response.error) {
       setError(response.error)
@@ -97,10 +93,10 @@ export default function RegisterScreen({ navigation }) {
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
-    marginTop: 4,
+    marginTop: 4
   },
   link: {
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary
+  }
 })

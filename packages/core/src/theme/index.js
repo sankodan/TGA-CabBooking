@@ -8,6 +8,6 @@ export const theme = {
     primary: '#121330',
     secondary: '#414757',
     error: '#f13a59',
-    success: '#00B386',
-  },
+    success: '#00B386'
+  }
 }

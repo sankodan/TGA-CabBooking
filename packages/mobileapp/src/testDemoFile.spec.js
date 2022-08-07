@@ -1,9 +1,7 @@
 import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react-native';
-import NewMessageForm from './NewMessageForm';
+import NewMessageForm from './testDemoFile';
 import {shallow} from 'enzyme';
-
-const wrapper = shallow(<NewMessageForm />);
 
 describe('NewMessageForm', () => {
   describe('clicking send', () => {
@@ -21,6 +19,7 @@ describe('NewMessageForm', () => {
     });
 
     it('clears the message field', () => {
+      shallow(<NewMessageForm />);
       expect(screen.getByTestId('messageText')).toHaveProp('value', '');
     });
 

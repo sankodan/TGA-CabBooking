@@ -1,7 +1,7 @@
 import React from 'react'
-import { Background, Paragraph, Button, Header, Logo } from "@sankodan/com.cabbooking.components"
+import { Background, Paragraph, Button, Header, Logo } from '@sankodan/com.cabbooking.components'
 
-export default function StartScreen({ navigation }) {
+export default function StartScreen ({ navigation }) {
   return (
     <Background>
       <Logo />

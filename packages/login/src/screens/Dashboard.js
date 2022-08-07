@@ -1,12 +1,8 @@
 import React from 'react'
-import { Background } from "@sankodan/com.cabbooking.components"
-import { Logo } from "@sankodan/com.cabbooking.components"
-import { Header } from "@sankodan/com.cabbooking.components"
-import { Paragraph } from "@sankodan/com.cabbooking.components"
-import { Button } from "@sankodan/com.cabbooking.components"
+import { Background, Logo, Header, Paragraph, Button } from '@sankodan/com.cabbooking.components'
 import { logoutUser } from '@sankodan/com.cabbooking.core'
 
-export default function Dashboard() {
+export default function Dashboard () {
   return (
     <Background>
       <Logo />

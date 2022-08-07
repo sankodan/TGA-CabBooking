@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper'
-import { Background, Logo, Header, Button, TextInput, BackButton, Toast } from "@sankodan/com.cabbooking.components"
-import { theme } from '@sankodan/com.cabbooking.core'
-import { emailValidator } from '@sankodan/com.cabbooking.core'
-import { passwordValidator } from '@sankodan/com.cabbooking.core'
-import { loginUser } from '@sankodan/com.cabbooking.core'
+import { Background, Logo, Header, Button, TextInput, BackButton, Toast } from '@sankodan/com.cabbooking.components'
+import { theme, emailValidator, passwordValidator, loginUser } from '@sankodan/com.cabbooking.core'
 
-export default function LoginScreen({ navigation }) {
+export default function LoginScreen ({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
   const [loading, setLoading] = useState()
@@ -24,7 +21,7 @@ export default function LoginScreen({ navigation }) {
     setLoading(true)
     const response = await loginUser({
       email: email.value,
-      password: password.value,
+      password: password.value
     })
     if (response.error) {
       setError(response.error)
@@ -86,18 +83,18 @@ const styles = StyleSheet.create({
   forgotPassword: {
     width: '100%',
     alignItems: 'flex-end',
-    marginBottom: 24,
+    marginBottom: 24
   },
   row: {
     flexDirection: 'row',
-    marginTop: 4,
+    marginTop: 4
   },
   forgot: {
     fontSize: 13,
-    color: theme.colors.secondary,
+    color: theme.colors.secondary
   },
   link: {
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary
+  }
 })

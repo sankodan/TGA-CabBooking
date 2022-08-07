@@ -2,7 +2,7 @@ import React from 'react'
 import { ImageBackground, StyleSheet, KeyboardAvoidingView } from 'react-native'
 import { theme } from '@sankodan/com.cabbooking.core'
 
-export default function Background({ children }) {
+export default function Background ({ children }) {
   return (
     <ImageBackground
       source={require('../assets/background_dot.png')}
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     width: '100%',
-    backgroundColor: theme.colors.surface,
+    backgroundColor: theme.colors.surface
   },
   container: {
     flex: 1,
@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     maxWidth: 340,
     alignSelf: 'center',
     alignItems: 'center',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center'
+  }
 })
