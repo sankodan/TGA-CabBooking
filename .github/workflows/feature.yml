@@ -6,8 +6,14 @@ name: Feature Updated
 on:
   push:
     branches: [feature-**]
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
 jobs:
    #First job
-  install-and-test:
-    uses: ./.github/workflows/lint-test-check.yml
-    secrets: inherit
+    install-and-test:
+      uses: ./.github/workflows/lint-test-check.yml
+      secrets: inherit
+    # build-and-release-ios:
+    #   uses: ./.github/workflows/build-ios.yml
+    #   secrets: inherit

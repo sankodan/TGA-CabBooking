@@ -6,7 +6,8 @@ name: Development Updated
 on:
   push:
     branches: [development]
-
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   #First job
   install-and-test:

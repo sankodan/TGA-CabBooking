@@ -1,0 +1,18 @@
+{
+  "name": "@sankodan/com.cabbooking.components",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sankodan/TGA-CabBooking.git"
+  },
+  "publishConfig": {
+    "@sankodan:registry": "https://npm.pkg.github.com"
+  }
+}

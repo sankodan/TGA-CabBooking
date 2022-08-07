@@ -3,7 +3,8 @@ name: Release Updated
 on:
   push:
     branches: [release]
-
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   #First job
   install-and-test:
@@ -17,6 +18,10 @@ jobs:
     with:
       tag-suffix: uat
       release-title: UAT Build
+    secrets: inherit
+
+  publish-packages:
+    uses: ./.github/workflows/publish-packages.yml
     secrets: inherit
 
   #Third Job
