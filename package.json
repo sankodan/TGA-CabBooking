@@ -11,7 +11,12 @@
       "packages/*"
     ],
     "nohoist": [
-      "*"
+      "**/react",
+      "**/react-dom",
+      "**/react-native",
+      "**/react-native/**",
+      "**/enzyme-adapter-react-16",
+      "**/enzyme-adapter-react-16/**"
     ]
   },
   "scripts": {
