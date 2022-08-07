@@ -11,18 +11,14 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react",
-      "**/react-dom",
-      "**/react-native",
-      "**/react-native/**",
-      "**/enzyme-adapter-react-16",
-      "**/enzyme-adapter-react-16/**"
+      "*"
     ]
   },
   "scripts": {
-    "coverage" : "yarn lerna-lcov-aggregate",
+    "coverage": "yarn lerna-lcov-aggregate",
     "test": "lerna run test --parallel",
-    "lint": "yarn workspace mobileapp eslint",
+    "lint": "eslint packages/**/src",
+    "lint-fix": "eslint packages/**/src --fix",
     "packages:publish": "lerna publish --yes",
     "ios:mobileapp": "yarn workspace mobileapp ios",
     "ios:pods:mobileapp": "yarn workspace mobileapp pod-install",
@@ -34,14 +30,13 @@
     "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
   },
   "devDependencies": {
-    "eslint": "8.19.0",
+    "eslint": "^7.11.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-n": "15.2.4",
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.30.1",
-    "jest": "^28.1.3",
     "lerna": "^3.22.1",
-    "lerna-lcov-aggregate":"1.0.0"
+    "lerna-lcov-aggregate": "1.0.0"
   }
 }

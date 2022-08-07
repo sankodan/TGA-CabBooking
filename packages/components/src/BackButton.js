@@ -1,7 +1,7 @@
 import React from 'react'
 import { TouchableOpacity, Image, StyleSheet } from 'react-native'
 
-export default function BackButton({ goBack }) {
+export default function BackButton ({ goBack }) {
   return (
     <TouchableOpacity onPress={goBack} style={styles.container}>
       <Image
@@ -15,11 +15,11 @@ export default function BackButton({ goBack }) {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    top: 10+50,
-    left: 4,
+    top: 10 + 50,
+    left: 4
   },
   image: {
     width: 24,
-    height: 24,
-  },
+    height: 24
+  }
 })

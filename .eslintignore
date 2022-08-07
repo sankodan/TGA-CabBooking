@@ -1,0 +1,6 @@
+**/node_modules/*
+*spec.js/*
+*.test.js
+/packages/**/App.js/*
+**/coverage/*
+**/test/*

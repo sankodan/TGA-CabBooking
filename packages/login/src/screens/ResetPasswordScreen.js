@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { Background, BackButton, TextInput, Button, Header, Logo, Toast } from "@sankodan/com.cabbooking.components"
-import { emailValidator } from '@sankodan/com.cabbooking.core'
-import { sendEmailWithPassword } from '@sankodan/com.cabbooking.core'
+import { Background, BackButton, TextInput, Button, Header, Logo, Toast } from '@sankodan/com.cabbooking.components'
+import { emailValidator, sendEmailWithPassword } from '@sankodan/com.cabbooking.core'
 
-export default function ResetPasswordScreen({ navigation }) {
+export default function ResetPasswordScreen ({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [loading, setLoading] = useState(false)
   const [toast, setToast] = useState({ value: '', type: '' })
@@ -21,7 +20,7 @@ export default function ResetPasswordScreen({ navigation }) {
     } else {
       setToast({
         type: 'success',
-        message: 'Email with password has been sent.',
+        message: 'Email with password has been sent.'
       })
     }
     setLoading(false)

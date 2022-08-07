@@ -1,5 +1,4 @@
-import auth from '@react-native-firebase/auth';
-
+import auth from '@react-native-firebase/auth'
 
 export const logoutUser = () => {
   auth().signOut()
@@ -7,27 +6,27 @@ export const logoutUser = () => {
 
 export const signUpUser = async ({ name, email, password }) => {
   try {
-   const user  = await auth()
+    const user = await auth()
       .createUserWithEmailAndPassword(email, password)
     auth().currentUser.updateProfile({
-      displayName: name,
+      displayName: name
     })
     return { user }
   } catch (error) {
     return {
-      error: error.message,
+      error: error.message
     }
   }
 }
 
 export const loginUser = async ({ email, password }) => {
   try {
-    const user  = await auth()
+    const user = await auth()
       .signInWithEmailAndPassword(email, password)
     return { user }
   } catch (error) {
     return {
-      error: error.message,
+      error: error.message
     }
   }
 }
@@ -38,7 +37,7 @@ export const sendEmailWithPassword = async (email) => {
     return {}
   } catch (error) {
     return {
-      error: error.message,
+      error: error.message
     }
   }
 }

@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 import { Text } from 'react-native-paper'
 import { theme } from '@sankodan/com.cabbooking.core'
 
-export default function Header(props) {
+export default function Header (props) {
   return <Text style={styles.header} {...props} />
 }
 
@@ -12,6 +12,6 @@ const styles = StyleSheet.create({
     fontSize: 21,
     color: theme.colors.primary,
     fontWeight: 'bold',
-    paddingVertical: 12,
-  },
+    paddingVertical: 12
+  }
 })
