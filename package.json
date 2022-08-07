@@ -1,6 +1,6 @@
 {
   "name": "monorepotemplate",
-  "version": "1.0.1-dev.1",
+  "version": "1.0.1-dev.2",
   "main": "index.js",
   "private": true,
   "repository": "https://github.com/sankodan/monorepotemplate.git",
@@ -15,7 +15,7 @@
     ]
   },
   "scripts": {
-    "coverage" : "yarn lerna-lcov-aggregate",
+    "coverage": "yarn lerna-lcov-aggregate",
     "test": "lerna run test --parallel",
     "lint": "yarn workspace mobileapp eslint",
     "packages:publish": "lerna publish --yes",
@@ -37,6 +37,6 @@
     "eslint-plugin-react": "7.30.1",
     "jest": "^28.1.3",
     "lerna": "^3.22.1",
-    "lerna-lcov-aggregate":"1.0.0"
+    "lerna-lcov-aggregate": "1.0.0"
   }
 }
