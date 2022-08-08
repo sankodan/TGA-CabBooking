@@ -228,7 +228,6 @@ android {
                 storePassword keystoreProperties['storePassword']
             }
         }
-    }
     buildTypes {
         release {
             // Caution! In production, you need to generate your own keystore file.
