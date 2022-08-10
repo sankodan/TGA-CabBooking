@@ -15,6 +15,7 @@ export default function ResetPasswordScreen ({ navigation }) {
     }
     setLoading(true)
     const response = await sendEmailWithPassword(email.value)
+    console.log("sendEmailWithPassword",response)
     if (response.error) {
       setToast({ type: 'error', message: response.error })
     } else {
@@ -54,7 +55,7 @@ export default function ResetPasswordScreen ({ navigation }) {
       >
         Send Instructions
       </Button>
-      <Toast {...toast} onDismiss={() => setToast({ value: '', type: '' })} />
+      <Toast {...toast} testID="onDismiss" onDismiss={() => setToast({ value: '', type: '' })} />
     </Background>
   )
 }
