@@ -5,8 +5,6 @@ import { Background } from '@sankodan/com.cabbooking.components'
 import { theme } from '@sankodan/com.cabbooking.core'
 
 export default function AuthLoadingScreen ({ navigation }) {
-  
-
   React.useEffect(() => {
     const onAuthStateChanged = (user) => {
       if (user) {

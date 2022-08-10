@@ -15,7 +15,6 @@ export default function ResetPasswordScreen ({ navigation }) {
     }
     setLoading(true)
     const response = await sendEmailWithPassword(email.value)
-    console.log("sendEmailWithPassword",response)
     if (response.error) {
       setToast({ type: 'error', message: response.error })
     } else {
