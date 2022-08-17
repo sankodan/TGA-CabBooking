@@ -1,0 +1,46 @@
+{
+  "name": "monorepotemplate",
+  "version": "1.0.1-dev.7",
+  "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/sankodan/monorepotemplate.git",
+  "author": "sankodan <54448599+sankodan@users.noreply.github.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "*"
+    ]
+  },
+  "scripts": {
+    "coverage": "yarn lerna-lcov-aggregate",
+    "test": "lerna run test --parallel",
+    "lint": "eslint packages/**/src",
+    "lint-fix": "eslint packages/**/src --fix",
+    "packages:publish": "lerna publish --yes",
+    "detox:build:ios": "yarn workspace mobileapp detox:build:ios",
+    "detox:test:ios": "yarn workspace mobileapp detox:test:ios",
+    "ios:mobileapp": "yarn workspace mobileapp ios",
+    "ios:pods:mobileapp": "yarn workspace mobileapp pod-install",
+    "ios:xcode:mobileapp": "yarn workspace mobileapp xcode",
+    "android:studio:mobileapp": "yarn workspace mobileapp studio",
+    "android:mobileapp": "yarn workspace mobileapp android",
+    "metro": "yarn workspace start",
+    "web": "yarn workspace webapp start",
+    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.2.4",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.30.1",
+    "lerna": "^3.22.1",
+    "lerna-lcov-aggregate": "1.0.0",
+    "husky": "^7.0.4"
+  }
+}

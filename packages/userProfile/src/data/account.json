@@ -1,0 +1,30 @@
+{
+    "accountList": [
+      {
+        "title": "Profile",
+        "action": "profile",
+        "testID": "profile_link"
+      },
+      {
+        "title": "Terms & Conditions",
+        "action": "promotionalTnC",
+        "testID": "li_promotionalTerm_link"
+      },
+      {
+        "title": "Help & Support",
+        "action": "help_support",
+        "testID": "help_support_link "
+      },
+      {
+        "title": "Rewards",
+        "action": "Rewards",
+        "testID": "rewards_link"
+      },
+      {
+        "title": "Discount",
+        "action": "Discount",
+        "testID": "discount_link"
+      }
+    ]
+  }
+  

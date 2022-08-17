@@ -1,0 +1,53 @@
+{
+  "name": "@sankodan/com.cabbooking.core",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src --fix",
+    "test": "jest src -u --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sankodan/TGA-CabBooking.git"
+  },
+  "publishConfig": {
+    "@sankodan:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@react-native-firebase/app": "^15.2.0",
+    "@react-native-firebase/auth": "^15.2.0",
+    "react-native-paper": "^4.12.4",
+    "axios":"0.27.2",
+    "react-native-encrypted-storage": "4.0.2",
+    "@reduxjs/toolkit":"1.8.4",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-persist": "^6.0.0",
+    "redux-persist-filesystem-storage": "4.0.0",
+    "redux-promise-middleware": "^6.1.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/jest-native": "4.0.5",
+    "@testing-library/react-native": "10.1.0",
+    "babel-jest": "^26.6.0",
+    "detox": "19.7.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "eslint": "^7.11.0",
+    "eslint-plugin-detox": "^1.0.0",
+    "jest": "26.6.0",
+    "metro-react-native-babel-preset": "^0.70.3",
+    "react-dom": "^18.2.0",
+    "react-native-monorepo-tools": "^1.1.3",
+    "react-test-renderer": "18.0.0",
+    "axios-mock-adapter" : "1.21.2",
+    "redux-mock-store" : "1.5.4"
+  }
+}

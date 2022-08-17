@@ -1,0 +1,36 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Development Updated
+
+on:
+  push:
+    branches: [development]
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  #First job
+  install-and-test:
+    uses: ./.github/workflows/lint-test-check.yml
+    secrets: inherit
+
+ #Second job
+  versioning:
+    needs: install-and-test
+    uses: ./.github/workflows/version-bump.yml
+    with:
+      tag-suffix: dev
+      release-title: Dev Build
+    secrets: inherit
+
+  #Third Job
+  build-and-release-android:
+    needs: versioning
+    uses: ./.github/workflows/build-android.yml
+    secrets: inherit
+
+  #Fourth Job
+  build-and-release-ios:
+    needs: versioning
+    uses: ./.github/workflows/build-ios.yml
+    secrets: inherit

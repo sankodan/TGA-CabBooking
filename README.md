@@ -1,1 +1,2 @@
-# TGA-CabBooking
+# monorepotemplate
+Provides a react template for monorepo
