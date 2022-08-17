@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {
   AccountScreen,
   AboutUsScreen,
-} from '@sankodan/com.cabbooking.userProfile';
+} from '@sankodan/com.cabbooking.userprofile';
 
 const Stack = createStackNavigator();
 
