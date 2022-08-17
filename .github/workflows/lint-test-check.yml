@@ -25,17 +25,17 @@ jobs:
       - name: Install Node modules
         run: yarn install
 
+       - name: Install detox-cli
+        run: npm install -g detox-cli
+
+      - name: Install applesimutils & detox-cli
+        run: brew tap wix/brew && install applesimutils
+
       - name: Linting
         run: yarn lint
 
       - name: Unit & Integration tests
         run: yarn test
-
-      - name: Install detox-cli
-        run: npm install -g detox-cli
-
-      - name: Install applesimutils & detox-cli
-        run: brew install applesimutils
 
       - name: e2e tests
         run: yarn detox:build:ios && detox:test:ios
