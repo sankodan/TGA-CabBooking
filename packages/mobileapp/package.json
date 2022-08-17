@@ -10,7 +10,9 @@
     "studio": "studio android",
     "xcode": "xed ios",
     "test": "jest src -u --coverage",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "detox:build:ios" : "detox build --configuration ios",
+    "detox:test:ios" : "detox test --configuration ios"
   },
   "dependencies": {
     "@react-native-firebase/app": "^15.2.0",
