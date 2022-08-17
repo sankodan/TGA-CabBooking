@@ -1,6 +1,6 @@
 {
   "name": "monorepotemplate",
-  "version": "1.0.1-dev.7",
+  "version": "1.0.1-dev.8",
   "main": "index.js",
   "private": true,
   "repository": "https://github.com/sankodan/monorepotemplate.git",
