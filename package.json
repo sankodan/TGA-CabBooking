@@ -27,7 +27,8 @@
     "android:mobileapp": "yarn workspace mobileapp android",
     "metro": "yarn workspace start",
     "web": "yarn workspace webapp start",
-    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
+    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
+    "postinstall": "husky install"
   },
   "devDependencies": {
     "eslint": "^7.11.0",
@@ -37,6 +38,7 @@
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.30.1",
     "lerna": "^3.22.1",
-    "lerna-lcov-aggregate": "1.0.0"
+    "lerna-lcov-aggregate": "1.0.0",
+    "husky": "^7.0.4"
   }
 }
