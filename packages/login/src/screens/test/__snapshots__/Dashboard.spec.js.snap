@@ -55,6 +55,7 @@ exports[`Dashboard clicking logoutButton Dashboard snapshot 1`] = `
     }
   >
     <Image
+      resizeMode="contain"
       source={
         Object {
           "testUri": "../../../packages/components/assets/logo.png",
@@ -62,9 +63,8 @@ exports[`Dashboard clicking logoutButton Dashboard snapshot 1`] = `
       }
       style={
         Object {
-          "height": 110,
-          "marginBottom": 8,
-          "width": 110,
+          "height": 150,
+          "width": 200,
         }
       }
     />
