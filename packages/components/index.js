@@ -6,6 +6,8 @@ import Logo from './src/Logo'
 import Paragraph from './src/Paragraph'
 import TextInput from './src/TextInput'
 import Toast from './src/Toast'
+import Avatar from './src/Avatar'
+import CaretIcon from './src/CaretIcon'
 
 module.exports = {
   BackButton,
@@ -15,5 +17,7 @@ module.exports = {
   Logo,
   Paragraph,
   TextInput,
-  Toast
+  Toast,
+  Avatar,
+  CaretIcon
 }

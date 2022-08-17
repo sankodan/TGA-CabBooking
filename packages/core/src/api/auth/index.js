@@ -41,3 +41,14 @@ export const sendEmailWithPassword = async (email) => {
     }
   }
 }
+
+export const userProfile = async () => {
+  try {
+    const user = await auth().currentUser
+    return { user }
+  } catch (error) {
+    return {
+      error: error.message
+    }
+  }
+}

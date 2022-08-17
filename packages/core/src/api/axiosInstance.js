@@ -1,5 +1,9 @@
 import axios from 'axios'
 
+// const MockAdapter = require('axios-mock-adapter');
+// const mock = new MockAdapter(axiosInstance, { delayResponse: 1000 });
+// mock.onGet('/user').reply(200, {});
+
 axios.interceptors.request.use((config) => {
   config.baseURL = 'http://localhost:5000'
   return config

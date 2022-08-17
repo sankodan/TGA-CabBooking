@@ -6,9 +6,7 @@ import {
   LoginScreen,
   RegisterScreen,
   ResetPasswordScreen,
-  Dashboard,
 } from '@sankodan/com.cabbooking.login';
-
 const Stack = createStackNavigator();
 
 const LoginStack = () => {
@@ -22,7 +20,6 @@ const LoginStack = () => {
       <Stack.Screen name="StartScreen" component={StartScreen} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-      <Stack.Screen name="Dashboard" component={Dashboard} />
       <Stack.Screen
         name="ResetPasswordScreen"
         component={ResetPasswordScreen}

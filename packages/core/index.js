@@ -12,7 +12,11 @@ import {
   emailValidator
 } from './src/helpers'
 
+import configureStore from './src/store';
+
+
 module.exports = {
+  ...configureStore,
   theme,
   firebaseConfig,
   signUpUser,
