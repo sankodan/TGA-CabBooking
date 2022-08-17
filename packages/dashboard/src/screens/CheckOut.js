@@ -3,7 +3,6 @@ import { Background, Paragraph, Avatar } from '@sankodan/com.cabbooking.componen
 import { View } from 'react-native'
 
 export default function CheckOut (props) {
-  console.log('props', JSON.stringify(props))
   return (
     <Background>
       {(props && props.route && props.route.params && props.route.params.item)
