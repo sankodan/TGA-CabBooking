@@ -25,7 +25,7 @@ jobs:
       - name: Install Node modules
         run: yarn install
 
-       - name: Install detox-cli
+      - name: Install detox-cli
         run: npm install -g detox-cli
 
       - name: Install applesimutils & detox-cli
