@@ -1,6 +1,6 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react-native'
-import Checkout from '../Checkout'
+import Checkout from '../CheckOut'
 import { shallow } from 'enzyme'
 
 describe('Checkout', () => {
