@@ -13,8 +13,7 @@ export default function Dashboard () {
       </Paragraph>
       <Button testID = 'logoutButton' mode="outlined" onPress={logoutUser}>
         Logout
-
-      </ Button>
+      </Button>
     </Background>
   )
 }
