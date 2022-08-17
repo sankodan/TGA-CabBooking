@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {BookingHistoryScreen} from '@sankodan/com.cabbooking.userProfile';
+import {BookingHistoryScreen} from '@sankodan/com.cabbooking.userprofile';
 
 const Stack = createStackNavigator();
 
