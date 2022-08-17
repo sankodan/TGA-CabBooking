@@ -5,8 +5,8 @@
   "apps": {
     "ios": {
       "type": "ios.app",
-      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/RiderApp.app",
-      "build": "xcodebuild -workspace ios/RiderApp.xcworkspace -scheme RiderApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/mobileapp.app",
+      "build": "xcodebuild -workspace ios/mobileapp.xcworkspace -scheme mobileapp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
     },
     "android": {
       "type": "android.apk",
@@ -17,7 +17,7 @@
     "simulator": {
       "type": "ios.simulator",
       "device": {
-        "type": "iPhone 11"
+        "type": "iPhone 13"
       }
     },
     "emulator": {
