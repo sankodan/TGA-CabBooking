@@ -1,49 +1,26 @@
 import axios from 'axios'
 
-// const MockAdapter = require('axios-mock-adapter');
-
-const axiosInstance = axios.create({
-  baseURL: '',
-  timeout: 60000
+axios.interceptors.request.use((config) => {
+  config.baseURL = 'http://localhost:5000'
+  return config
 })
 
-const requestHandler = async (request) => {
-  const updatedRequest = request
-  return updatedRequest
-}
+axios.interceptors.response.use(null, (error) => {
+  const expectedError =
+    error.response &&
+    error.response.status >= 400 &&
+    error.response.status < 500
 
-const responseHandler = response => response
-
-async function errorHandler (error) {
-  const { response = {} } = error
-  const errorResponse = response
-  const { status, data = {} } = errorResponse
-  const { message } = data
-  const originalRequest = error.config
-  // refersh token in case of Unauthorized
-  if ((status === 401 || message === 'Unauthorized') && !originalRequest.retryapi) {
-    originalRequest.retryapi = true
-    try {
-      console.log('refersh token')
-    } catch (tokenError) {
-      console.log('logout user')
-    }
-  } else if ((status === 401 || message === 'Unauthorized') && originalRequest.retryapi) {
-    console.log('logout user')
+  if (!expectedError) {
+    console.log('An unexpected error occured')
   }
+
   return Promise.reject(error)
+})
+
+export default {
+  get: axios.get,
+  post: axios.post,
+  put: axios.put,
+  delete: axios.delete
 }
-
-axiosInstance.interceptors.request.use(
-  request => requestHandler(request),
-  error => errorHandler(error)
-)
-
-axiosInstance.interceptors.response.use(
-  response => responseHandler(response),
-  error => errorHandler(error)
-)
-
-// const mock = new MockAdapter(axiosInstance, { delayResponse: 1000 });
-
-export default axiosInstance

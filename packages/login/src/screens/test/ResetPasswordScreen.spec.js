@@ -38,6 +38,7 @@ describe('ResetPasswordScreen', () => {
       toJSONObject = toJSON
       fireEvent.changeText(screen.getByTestId('emailAddress'), 'test')
       fireEvent.press(screen.getByTestId('resetPasswordEmailButton'))
+      fireEvent.press(screen.getByTestId('onDismiss'))
     })
 
     it('ResetPasswordScreen snapshot', () => {

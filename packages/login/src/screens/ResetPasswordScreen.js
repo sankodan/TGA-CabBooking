@@ -54,7 +54,7 @@ export default function ResetPasswordScreen ({ navigation }) {
       >
         Send Instructions
       </Button>
-      <Toast {...toast} onDismiss={() => setToast({ value: '', type: '' })} />
+      <Toast {...toast} testID="onDismiss" onDismiss={() => setToast({ value: '', type: '' })} />
     </Background>
   )
 }

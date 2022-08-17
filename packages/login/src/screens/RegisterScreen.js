@@ -27,7 +27,7 @@ export default function RegisterScreen ({ navigation }) {
       email: email.value,
       password: password.value
     })
-    if (response.error) {
+    if (response?.error) {
       setError(response.error)
     }
     setLoading(false)
