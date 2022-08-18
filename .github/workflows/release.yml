@@ -12,13 +12,13 @@ jobs:
     secrets: inherit
 
   #Second job
-  versioning:
-    needs: install-and-test
-    uses: ./.github/workflows/version-bump.yml
-    with:
-      tag-suffix: uat
-      release-title: UAT Build
-    secrets: inherit
+  # versioning:
+  #   needs: install-and-test
+  #   uses: ./.github/workflows/version-bump.yml
+  #   with:
+  #     tag-suffix: uat
+  #     release-title: UAT Build
+  #   secrets: inherit
 
   publish-packages:
     needs: versioning
