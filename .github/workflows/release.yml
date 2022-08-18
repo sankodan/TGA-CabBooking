@@ -21,7 +21,7 @@ jobs:
   #   secrets: inherit
 
   publish-packages:
-    needs: versioning
+    # needs: versioning
     uses: ./.github/workflows/publish-packages.yml
     secrets: inherit
 
