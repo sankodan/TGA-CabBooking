@@ -5,4 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.0.1 (2022-08-17)
 
-**Note:** Version bump only for package @sankodan/com.cabbooking.userProfile
+**Note:** Version bump only for package @sankodan/com.cabbooking.userprofile

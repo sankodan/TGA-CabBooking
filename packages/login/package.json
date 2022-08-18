@@ -7,6 +7,9 @@
     "test": "jest src -u --coverage",
     "lint": "eslint src --fix"
   },
+  "publishConfig": {
+    "@sankodan:registry": "https://npm.pkg.github.com"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

@@ -1,11 +1,14 @@
 {
-  "name": "@sankodan/com.cabbooking.userProfile",
+  "name": "@sankodan/com.cabbooking.userprofile",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest src -u --coverage",
     "lint": "eslint src --fix"
+  },
+  "publishConfig": {
+    "@sankodan:registry": "https://npm.pkg.github.com"
   },
   "author": "",
   "license": "ISC",

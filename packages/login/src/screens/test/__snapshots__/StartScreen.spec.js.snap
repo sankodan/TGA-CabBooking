@@ -55,6 +55,7 @@ exports[`StartScreen clicking RegisterScreenButton Dashboard snapshot 1`] = `
     }
   >
     <Image
+      resizeMode="contain"
       source={
         Object {
           "testUri": "../../../packages/components/assets/logo.png",
@@ -62,9 +63,8 @@ exports[`StartScreen clicking RegisterScreenButton Dashboard snapshot 1`] = `
       }
       style={
         Object {
-          "height": 110,
-          "marginBottom": 8,
-          "width": 110,
+          "height": 150,
+          "width": 200,
         }
       }
     />
@@ -87,9 +87,7 @@ exports[`StartScreen clicking RegisterScreenButton Dashboard snapshot 1`] = `
           },
         ]
       }
-    >
-      Login Template
-    </Text>
+    />
     <Text
       style={
         Array [
@@ -110,7 +108,7 @@ exports[`StartScreen clicking RegisterScreenButton Dashboard snapshot 1`] = `
         ]
       }
     >
-      The easiest way to start with your amazing application.
+      The easiest way to start with your amazing movie booking application.
     </Text>
     <View
       collapsable={false}
@@ -393,6 +391,7 @@ exports[`StartScreen clicking loginScreenButton Dashboard snapshot 1`] = `
     }
   >
     <Image
+      resizeMode="contain"
       source={
         Object {
           "testUri": "../../../packages/components/assets/logo.png",
@@ -400,9 +399,8 @@ exports[`StartScreen clicking loginScreenButton Dashboard snapshot 1`] = `
       }
       style={
         Object {
-          "height": 110,
-          "marginBottom": 8,
-          "width": 110,
+          "height": 150,
+          "width": 200,
         }
       }
     />
@@ -425,9 +423,7 @@ exports[`StartScreen clicking loginScreenButton Dashboard snapshot 1`] = `
           },
         ]
       }
-    >
-      Login Template
-    </Text>
+    />
     <Text
       style={
         Array [
@@ -448,7 +444,7 @@ exports[`StartScreen clicking loginScreenButton Dashboard snapshot 1`] = `
         ]
       }
     >
-      The easiest way to start with your amazing application.
+      The easiest way to start with your amazing movie booking application.
     </Text>
     <View
       collapsable={false}

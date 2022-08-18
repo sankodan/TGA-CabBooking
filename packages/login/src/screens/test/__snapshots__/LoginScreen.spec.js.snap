@@ -89,6 +89,7 @@ exports[`LoginScreen worng password send clears the message field 1`] = `
       />
     </View>
     <Image
+      resizeMode="contain"
       source={
         Object {
           "testUri": "../../../packages/components/assets/logo.png",
@@ -96,9 +97,8 @@ exports[`LoginScreen worng password send clears the message field 1`] = `
       }
       style={
         Object {
-          "height": 110,
-          "marginBottom": 8,
-          "width": 110,
+          "height": 150,
+          "width": 200,
         }
       }
     />
