@@ -21,17 +21,18 @@ jobs:
     secrets: inherit
 
   publish-packages:
+    needs: versioning
     uses: ./.github/workflows/publish-packages.yml
     secrets: inherit
 
-  #Third Job
-  build-android:
-    needs: versioning
-    uses: ./.github/workflows/build-android.yml
-    secrets: inherit
+  # #Third Job
+  # build-android:
+  #   needs: versioning
+  #   uses: ./.github/workflows/build-android.yml
+  #   secrets: inherit
 
-  #Fourth Job
-  build-ios:
-    needs: versioning
-    uses: ./.github/workflows/build-ios.yml
-    secrets: inherit
+  # #Fourth Job
+  # build-ios:
+  #   needs: versioning
+  #   uses: ./.github/workflows/build-ios.yml
+  #   secrets: inherit
