@@ -7,6 +7,10 @@
     "test": "jest src -u --coverage",
     "lint": "eslint src --fix"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sankodan/TGA-CabBooking.git"
+  },
   "publishConfig": {
     "@sankodan:registry": "https://npm.pkg.github.com"
   },
