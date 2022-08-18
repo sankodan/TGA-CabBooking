@@ -11,28 +11,19 @@ jobs:
     uses: ./.github/workflows/lint-test-check.yml
     secrets: inherit
 
-  #Second job
-  # versioning:
-  #   needs: install-and-test
-  #   uses: ./.github/workflows/version-bump.yml
-  #   with:
-  #     tag-suffix: uat
-  #     release-title: UAT Build
-  #   secrets: inherit
-
   publish-packages:
-    # needs: versioning
+    needs: install-and-test
     uses: ./.github/workflows/publish-packages.yml
     secrets: inherit
 
-  # #Third Job
-  # build-android:
-  #   needs: versioning
-  #   uses: ./.github/workflows/build-android.yml
-  #   secrets: inherit
+  #Third Job
+  build-android:
+    needs: publish-packages
+    uses: ./.github/workflows/build-android.yml
+    secrets: inherit
 
-  # #Fourth Job
-  # build-ios:
-  #   needs: versioning
-  #   uses: ./.github/workflows/build-ios.yml
-  #   secrets: inherit
+  #Fourth Job
+  build-ios:
+    needs: publish-packages
+    uses: ./.github/workflows/build-ios.yml
+    secrets: inherit
